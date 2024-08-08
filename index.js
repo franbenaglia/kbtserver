@@ -1,9 +1,3 @@
-// https://kafka.js.org/docs/getting-started
-
-// https://kiran2157.hashnode.dev/real-time-data-processing-with-kafka-and-nodejs#heading-1-clientjs
-
-// https://medium.com/@srijit29032001/kafka-messaging-in-node-js-a-simple-weekly-digest-1fd4af0e7f73
-
 const passport = require('./security/passport.js');
 const { PORT } = require('./config/constants');
 const dotenv = require('dotenv');
@@ -17,6 +11,7 @@ const socketio = require('./websocket/socketio.js');
 const mongodbConnect = require('./dbase/config.js');
 const oauth2Route = require('./routes/oauth2.js');
 const btRoute = require('./routes/bt.js');
+const initBlt = require('./blt/blt-ble.js');
 //const consumer = require('./kafka_pc/consumer');
 
 dotenv.config();
@@ -48,6 +43,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 mongodbConnect();
+
+//initBlt();
 
 socketio(server);
 

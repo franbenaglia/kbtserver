@@ -2,7 +2,7 @@ require('dotenv').config();
 
 module.exports = {
     URL: process.env.URL || 'http://localhost:',
-    PRIVATE_ADD: process.env.PRIVATE_ADD || '192.168.1.40',
+    PRIVATE_ADD: process.env.PRIVATE_ADD || '192.168.43.77',
     PORT: process.env.PORT || 3001,
     PORT_KAFKA: process.env.PORT_KAFKA || 9092,
     PORT_ZOOKEEPER: process.env.PORT_ZOOKEEPER || 2181,
